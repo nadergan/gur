@@ -27,6 +27,8 @@ http://52.236.144.52/service-b
 
 *Environment Setup:*
 
+After Clonning this this repository:
+
 1. Create an AKS cluster on your Azure account:
 Use the following command:  
 ``make cluster``
@@ -48,8 +50,8 @@ Use the following command:
 
 To access the service, use your favourite browser and access these links:  
 
-http://<IP>/service-a  
-http://<IP>/service-b  
+http://[IP]/service-a  
+http://[IP]/service-b  
 
 
 
