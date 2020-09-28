@@ -27,6 +27,8 @@ http://52.236.144.52/service-b
 
 *Environment Setup:*
 
+After Clonning this this repository:
+
 1. Create an AKS cluster on your Azure account:
 Use the following command:  
 ``make cluster``
