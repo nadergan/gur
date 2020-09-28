@@ -62,19 +62,7 @@ spec:
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  namespace: service-b
-  name: deny-from-other-namespaces
-spec:
-  podSelector:
-    matchLabels:
-  ingress:
-  - from:
-    - podSelector: {}
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: access-nginx
+  name: web-allow-all-from-ingress
   namespace: service-b
 spec:
   podSelector:
@@ -82,6 +70,9 @@ spec:
       app: service-b
   ingress:
     - from:
-      - podSelector:
+      - namespaceSelector:     # chooses all pods in namespaces labelled with role=ingress
           matchLabels:
-            app.kubernetes.io/instance: nginx-ingress
+            role: ingress  
+        podSelector:           # chooses pods with type ingress
+          matchLabels:
+            app.kubernetes.io/instance: nginx-ingress  
