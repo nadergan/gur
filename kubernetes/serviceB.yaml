@@ -70,9 +70,9 @@ spec:
       app: service-b
   ingress:
     - from:
-      - namespaceSelector:     # chooses all pods in namespaces labelled with role=ingress
+      - namespaceSelector:     # chooses all pods in namespaces labelled with team=operations
           matchLabels:
             role: ingress  
-        podSelector:           # chooses pods with type ingress
+        podSelector:           # chooses pods with type=monitoring
           matchLabels:
-            app.kubernetes.io/instance: nginx-ingress  
+            app: ingress

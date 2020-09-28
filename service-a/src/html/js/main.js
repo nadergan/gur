@@ -1,7 +1,6 @@
 let index = 0;
 let arraySize = 10;
-let priceInterval = 60000;  // ms
-let averageInterval = 600000; // ms
+let interval = 60000;  // 60 seconds
 let lastPrice = 0;
 let lastAverage = 0;
 let prices = [];
@@ -9,9 +8,9 @@ let prices = [];
 
 updatetBitcoinPrice();
 // Update Price Every Minute
-setInterval(function(){updatetBitcoinPrice()}, priceInterval);
+setInterval( function(){updatetBitcoinPrice()} , interval );
 // Update Average Price for the last 10 Minutes
-setInterval(function(){updateAverage()}, 10 * interval);
+setInterval( function(){updateAverage()} , 10 * interval);
 
 
 function updatetBitcoinPrice() {
