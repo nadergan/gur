@@ -17,31 +17,40 @@ General Guideline
 
 **Solution:**
 
+*Installed Environment*
+
+Please go the following URLs to access the requested services:  
+
+http://52.236.144.52/service-a  
+http://52.236.144.52/service-b  
+
+
 *Environment Setup:*
 
 1. Create an AKS cluster on your Azure account:
-Use the following command:
+Use the following command:  
 ``make cluster``
 
 2. Deploy NGINX ingress Controller on the the Cluster
-Use the following command:
-``make ingress``
+Use the following command:  
+``make ingress``  
 
-3. Deploy Service-A using the following command:
-``make service-a``
+3. Deploy Service-A using the following command:  
+``make service-a``  
 
-4. Deploy Service-B using the following command:
-``make service-b``
+4. Deploy Service-B using the following command:  
+``make service-b``  
 
-5. Determine the Ingress Controller IP address, please use the following command:
-``kubectl --namespace ingress-basic get services -o wide nginx-ingress-ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'``
+5. Determine the Ingress Controller IP address, please use the following command:  
+``kubectl --namespace ingress-basic get services -o wide nginx-ingress-ingress-nginx-controller -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'``  
 
-*Accessing the Service:*
+*Accessing the Service:*  
 
-To access the service, use your favourite browser and access these links:
+To access the service, use your favourite browser and access these links:  
 
-http://<IP>/service-a
-http://<IP>/service-b
+http://<IP>/service-a  
+http://<IP>/service-b  
+
 
 
 
