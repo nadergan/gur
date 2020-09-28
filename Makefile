@@ -1,3 +1,5 @@
+.PHONY: service-a service-b cluster docker creds ingress label
+
 cluster: 
 	az group create --name myAKSrg --location westeurope 
 	az aks create --resource-group myAKSrg --name myAKSCluster --node-count 2 --enable-addons monitoring,http_application_routing  --generate-ssh-keys --enable-rbac  --network-plugin azure --network-policy azure
