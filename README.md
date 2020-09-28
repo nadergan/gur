@@ -50,8 +50,8 @@ Use the following command:
 
 To access the service, use your favourite browser and access these links:  
 
-http://<IP>/service-a  
-http://<IP>/service-b  
+http://[IP]/service-a  
+http://[IP]/service-b  
 
 
 
